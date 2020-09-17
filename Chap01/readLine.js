@@ -1,0 +1,18 @@
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.question("What do you think of Node.js? ", (answer) => {
+  // TODO: Log the answer in a database
+  console.log(`Thank you for your valuable feedback: ${answer}`);
+
+  //   rl.close();
+});
+
+//사용자가 enter키를 누를때 발생하는 event 'line'
+rl.on("line", (input) => {
+  console.log(`Received: ${input}`);
+});
